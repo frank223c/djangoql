@@ -12,11 +12,15 @@
     textarea.value = input.value;
     textarea.id = input.id;
     textarea.name = input.name;
-    textarea.rows = 1;
+    textarea.rows = 2;
+    textarea.style.height = "25px";
+    textarea.style.borderRadius = "10px";
     textarea.setAttribute('maxlength', 2000);
     input.parentNode.insertBefore(textarea, input);
+    input.parentNode.removeChild(input.nextSibling);
     input.parentNode.removeChild(input);
     textarea.focus();
+
 
     DjangoQL.init({
       introspections: 'introspect/',

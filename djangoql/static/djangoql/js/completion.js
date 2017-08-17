@@ -396,11 +396,10 @@
       var style = window.getComputedStyle(this.textarea, null);
       var heightOffset = parseFloat(style.paddingTop) +
           parseFloat(style.paddingBottom);
-      this.textarea.style.height = '5px';
+      this.textarea.style.height = '25px';
       // dirty hack, works for Django admin styles only.
       // Ping me if you know how to get rid of "+1"
-      this.textarea.style.height = (this.textarea.scrollHeight - heightOffset) +
-          1 + 'px';
+      this.textarea.style.height = (this.textarea.scrollHeight - heightOffset) // + 1 + 'px';
     },
 
     popupCompletion: function () {
